@@ -13,14 +13,14 @@ fi
 #echo $dlrm_extra_option
 
 cpu=1
-gpu=1
+gpu=0
 pt=1
 c2=1
 
 ncores=28 #12 #6
 nsockets="0"
 
-ngpus="1 2 4 8"
+ngpus="0"
 
 numa_cmd="numactl --physcpubind=0-$((ncores-1)) -m $nsockets" #run on one socket, without HT
 dlrm_pt_bin="python dlrm_s_pytorch.py"
