@@ -23,8 +23,8 @@ nsockets="0"
 ngpus="0"
 
 numa_cmd="numactl --physcpubind=0-$((ncores-1)) -m $nsockets" #run on one socket, without HT
-dlrm_pt_bin="python dlrm_s_pytorch.py"
-dlrm_c2_bin="python dlrm_s_caffe2.py"
+dlrm_pt_bin="python3 dlrm_s_pytorch.py"
+dlrm_c2_bin="python3 dlrm_s_caffe2.py"
 
 data=random #synthetic
 print_freq=100
