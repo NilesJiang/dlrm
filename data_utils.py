@@ -1208,7 +1208,7 @@ def loadDataset(
         sub_sample_rate,
         randomize,
         data_split,
-        raw_path="",
+        raw_path="../dataset/download-terabyte-click-logs",
         pro_data="",
         memory_map=False
 ):
