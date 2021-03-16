@@ -947,7 +947,7 @@ def run():
     parser.add_argument("--num-indices-per-lookup", type=int, default=10)
     parser.add_argument("--num-indices-per-lookup-fixed", type=bool, default=False)
     parser.add_argument("--num-workers", type=int, default=0)
-    parser.add_argument("--memory-map", action="store_true", default=False)
+    parser.add_argument("--memory-map", action="store_true", default=True)
     # training
     parser.add_argument("--mini-batch-size", type=int, default=1)
     parser.add_argument("--nepochs", type=int, default=1)
@@ -992,7 +992,7 @@ def run():
     parser.add_argument("--save-model", type=str, default="")
     parser.add_argument("--load-model", type=str, default="../tb0875_10M.pt")
     # mlperf logging (disables other output and stops early)
-    parser.add_argument("--mlperf-logging", action="store_true", default=False)
+    parser.add_argument("--mlperf-logging", action="store_true", default=True)
     # stop at target accuracy Kaggle 0.789, Terabyte (sub-sampled=0.875) 0.8107
     parser.add_argument("--mlperf-acc-threshold", type=float, default=0.0)
     # stop at target AUC Terabyte (no subsampling) 0.8025
