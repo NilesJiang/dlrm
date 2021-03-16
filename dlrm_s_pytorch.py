@@ -1388,7 +1388,7 @@ def run():
         ld_train_loss = ld_model["train_loss"]
         ld_total_loss = ld_model["total_loss"]
         if args.mlperf_logging:
-            ld_gAUC_test = ld_model["test_auc"]
+            #ld_gAUC_test = ld_model["test_auc"]
         ld_acc_test = ld_model["test_acc"]
         if not args.inference_only:
             optimizer.load_state_dict(ld_model["opt_state_dict"])
