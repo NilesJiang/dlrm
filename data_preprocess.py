@@ -14,3 +14,6 @@ def __init__(self, path):
     criteo_kaggle=False,
     memory_map=False
   )
+
+  
+__init__();
