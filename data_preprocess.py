@@ -5,7 +5,7 @@ def __init__(self, path):
   d_util.getCriteoAdData(
      #datafile="<path-to-day_{0,...,23}>""
     datafile = "../dataset/day_4",
-    o_filename=terabyte_processed.npz,
+    o_filename= "terabyte_processed.npz",
     max_ind_range=-1,
     sub_sample_rate=0.0,
     days=1,
