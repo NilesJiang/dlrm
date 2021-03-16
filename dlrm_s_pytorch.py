@@ -937,7 +937,7 @@ def run():
     parser.add_argument("--rand-data-mu", type=float, default=-1)
     parser.add_argument("--rand-data-sigma", type=float, default=1)
     parser.add_argument("--data-trace-file", type=str, default="./input/dist_emb_j.log")
-    parser.add_argument("--data-set", type=str, default="kaggle")  # or terabyte
+    parser.add_argument("--data-set", type=str, default="terabyte")  # or kaggle
     parser.add_argument("--raw-data-file", type=str, default="")
     parser.add_argument("--processed-data-file", type=str, default="")
     parser.add_argument("--data-randomize", type=str, default="total")  # or day or none
@@ -1444,9 +1444,9 @@ def run():
         if args.quantize_emb_with_bit != 32:
             dlrm.quantize_embedding(args.quantize_emb_with_bit)
             # print(dlrm)
-        assert (
-            args.data_generation == "dataset"
-        ), "currently only dataset loader provides testset"
+        #assert (
+        #    args.data_generation == "dataset"
+        #), "currently only dataset loader provides testset"
 
     print("time/loss/accuracy (if enabled):")
 
