@@ -966,7 +966,7 @@ def run():
                         with more than 24 CPU cores and at least 1 TB of memory.",
     )
     # inference
-    parser.add_argument("--inference-only", action="store_true", default=False)
+    parser.add_argument("--inference-only", action="store_true", default=True)
     # quantize
     parser.add_argument("--quantize-mlp-with-bit", type=int, default=32)
     parser.add_argument("--quantize-emb-with-bit", type=int, default=32)
