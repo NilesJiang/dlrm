@@ -56,7 +56,7 @@ class CriteoDataset(Dataset):
             sub_sample_rate,
             randomize,
             split="train",
-            raw_path="",
+            raw_path="../dataset/day_4.gz",
             pro_data="",
             memory_map=False,
             dataset_multiprocessing=False,
