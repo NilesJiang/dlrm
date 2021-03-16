@@ -927,7 +927,7 @@ def run():
     parser.add_argument("--data-size", type=int, default=1)
     parser.add_argument("--num-batches", type=int, default=0)
     parser.add_argument(
-        "--data-generation", type=str, default="random"
+        "--data-generation", type=str, default="dataset"#random
     )  # synthetic or dataset
     parser.add_argument(
         "--rand-data-dist", type=str, default="uniform"
