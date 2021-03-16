@@ -1378,7 +1378,7 @@ def run():
         else:
             # when targeting inference on CPU
             ld_model = torch.load(args.load_model, map_location=torch.device("cpu"))
-        dlrm.load_state_dict(ld_model["state_dict"], strict=False)
+        #dlrm.load_state_dict(ld_model["state_dict"])
         ld_j = ld_model["iter"]
         ld_k = ld_model["epoch"]
         ld_nepochs = ld_model["nepochs"]
