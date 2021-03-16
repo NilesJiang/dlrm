@@ -990,7 +990,7 @@ def run():
     parser.add_argument("--tensor-board-filename", type=str, default="run_kaggle_pt")
     # store/load model
     parser.add_argument("--save-model", type=str, default="")
-    parser.add_argument("--load-model", type=str, default="")
+    parser.add_argument("--load-model", type=str, default="../tb0875_10M.pt")
     # mlperf logging (disables other output and stops early)
     parser.add_argument("--mlperf-logging", action="store_true", default=False)
     # stop at target accuracy Kaggle 0.789, Terabyte (sub-sampled=0.875) 0.8107
