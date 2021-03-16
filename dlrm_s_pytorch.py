@@ -1742,6 +1742,7 @@ def run():
                     },
                 )
         else:
+            train_data, train_ld, test_data, test_ld = dp.make_criteo_data_and_loaders(args)
             print("Testing for inference only")
             inference(
                 args,
