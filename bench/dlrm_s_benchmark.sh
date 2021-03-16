@@ -34,7 +34,7 @@ c2_net="async_scheduling"
 
 #Model param
 mb_size=2048 #1024 #512 #256
-nbatches=1000 #500 #100
+nbatches=1 #500 #100
 bot_mlp="512-512-64"
 top_mlp="1024-1024-1024-1"
 emb_size=64
@@ -72,7 +72,7 @@ if [ $cpu = 1 ]; then
     echo "-------------------------------"
     echo "Running PT (log file: $outf)"
     echo "-------------------------------"
-    cmd="$numa_cmd $dlrm_pt_bin --mini-batch-size=$mb_size --test-mini-batch-size=$tmb_size --test-num-workers=$tnworkers $_args $dlrm_extra_option > $outf"
+    cmd="$numa_cmd $dlrm_pt_bin --mini-batch-size=$mb_size --test-mini-batch-size=$tmb_size --test-num-workers=$tnworkers $_args $dlrm_extra_option > $outp"
     echo $cmd
     eval $cmd
     min=$(grep "iteration" $outf | awk 'BEGIN{best=999999} {if (best > $7) best=$7} END{print best}')
