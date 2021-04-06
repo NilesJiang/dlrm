@@ -175,7 +175,7 @@ def _batch_generator(
 def _test():
     generator = _batch_generator(
         data_filename='day',
-        data_directory='/input',
+        data_directory='../days',
         days=range(23),
         split="train",
         batch_size=2048
