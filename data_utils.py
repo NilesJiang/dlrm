@@ -901,7 +901,7 @@ def getCriteoAdData(
     d_file = lstr[-1].split(".")[0] if criteo_kaggle else lstr[-1]
     npzfile = d_path + ((d_file + "_day") if criteo_kaggle else d_file)
     
-    sys.exit(datafile)
+    
     sys.exit(d_file)
     sys.exit(npzfile)
     
