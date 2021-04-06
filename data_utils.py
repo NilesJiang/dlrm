@@ -958,8 +958,8 @@ def getCriteoAdData(
                     # file day_<number>
                     total_per_file_count = 0
                     with open(str(datafile_i)) as f:
-                        for _ in f:
-                            total_per_file_count += 1
+                        #for _ in f:
+                        total_per_file_count += 1
                     total_per_file.append(total_per_file_count)
                     total_count += total_per_file_count
                 else:
