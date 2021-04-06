@@ -900,6 +900,12 @@ def getCriteoAdData(
     d_path = "/".join(lstr[0:-1]) + "/"
     d_file = lstr[-1].split(".")[0] if criteo_kaggle else lstr[-1]
     npzfile = d_path + ((d_file + "_day") if criteo_kaggle else d_file)
+    
+    sys.stdout(d_path)
+    sys.stdout(d_file)
+    sys.stdout(npzfile)
+    
+    
     trafile = d_path + ((d_file + "_fea") if criteo_kaggle else "fea")
 
     # count number of datapoints in training set
