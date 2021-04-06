@@ -949,10 +949,10 @@ def getCriteoAdData(
             # 26 categorical features (an extra space indicates that feature is
             # missing and will be interpreted as 0).
             for i in range(days):
-                currentDirectory = os.getcwd()
-                sys.exit(currentDirectory)
-                
-                datafile_i = datafile + "_" + str(i)   + ".gz"
+                #currentDirectory = os.getcwd()
+                #sys.exit(currentDirectory)
+                #datafile_i = datafile + "_" + str(i)   + ".gz"
+                datafile_i = "../days/day" + "_" + str(i)   + ".gz"
                 if path.exists(str(datafile_i)):
                     print("Reading data from path=%s" % (str(datafile_i)))
                     # file day_<number>
