@@ -902,7 +902,6 @@ def getCriteoAdData(
     npzfile = d_path + ((d_file + "_day") if criteo_kaggle else d_file)
     trafile = d_path + ((d_file + "_fea") if criteo_kaggle else "fea")
 
-    path = "../days"
     # count number of datapoints in training set
     total_file = d_path + d_file + "_day_count.npz"
     if path.exists(total_file):
