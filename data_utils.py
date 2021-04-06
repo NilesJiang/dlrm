@@ -949,7 +949,7 @@ def getCriteoAdData(
             # 26 categorical features (an extra space indicates that feature is
             # missing and will be interpreted as 0).
             for i in range(days):
-                datafile_i = "./" + datafile + "_" + str(i)   + ".gz"
+                datafile_i = datafile + "_" + str(i)   + ".gz"
                 if path.exists(str(datafile_i)):
                     print("Reading data from path=%s" % (str(datafile_i)))
                     # file day_<number>
@@ -960,7 +960,7 @@ def getCriteoAdData(
                     total_per_file.append(total_per_file_count)
                     total_count += total_per_file_count
                 else:
-                    sys.exit(path)
+                    sys.exit(datafile)
                     sys.exit("ERROR: Criteo Terabyte Dataset path is invalid; please download from https://labs.criteo.com/2013/12/download-terabyte-click-logs")
 
     # process a file worth of data and reinitialize data
