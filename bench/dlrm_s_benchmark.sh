@@ -33,7 +33,7 @@ rand_seed=727
 c2_net="async_scheduling"
 
 #Model param
-mb_size=2048 #1024 #512 #256
+mb_size=1 #1024 #512 #256
 nbatches=1 #500 #100
 bot_mlp="512-512-64"
 top_mlp="1024-1024-1024-1"
