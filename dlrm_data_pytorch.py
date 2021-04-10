@@ -56,7 +56,7 @@ class CriteoDataset(Dataset):
             sub_sample_rate,
             randomize,
             split="train",
-            raw_path="../days",
+            raw_path="",
             pro_data="",
             memory_map=False,
             dataset_multiprocessing=False,
@@ -71,7 +71,7 @@ class CriteoDataset(Dataset):
             days = 7
             out_file = "kaggleAdDisplayChallenge_processed"
         elif dataset == "terabyte":
-            days = 1
+            days = 24
             out_file = "terabyte_processed"
         else:
             raise(ValueError("Data set option is not supported"))
@@ -1192,7 +1192,6 @@ def write_dist_to_file(file_path, unique_accesses, list_sd, cumm_sd):
 
 
 if __name__ == "__main__":
-    import sys
     import operator
     import argparse
 
