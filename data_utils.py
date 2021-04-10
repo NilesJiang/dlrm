@@ -38,7 +38,7 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import sys
-import os
+# import os
 from os import path
 from multiprocessing import Process, Manager
 # import io
@@ -900,8 +900,6 @@ def getCriteoAdData(
     d_path = "/".join(lstr[0:-1]) + "/"
     d_file = lstr[-1].split(".")[0] if criteo_kaggle else lstr[-1]
     npzfile = d_path + ((d_file + "_day") if criteo_kaggle else d_file)
-    
-    
     trafile = d_path + ((d_file + "_fea") if criteo_kaggle else "fea")
 
     # count number of datapoints in training set
@@ -951,21 +949,17 @@ def getCriteoAdData(
             # 26 categorical features (an extra space indicates that feature is
             # missing and will be interpreted as 0).
             for i in range(days):
-                #currentDirectory = os.getcwd()
-                #sys.exit(currentDirectory)
-                #datafile_i = datafile + "_" + str(i)   + ".gz"
-                datafile_i = "../days/day" + "_" + str(i)   + ".gz"
+                datafile_i = datafile + "_" + str(i)  # + ".gz"
                 if path.exists(str(datafile_i)):
                     print("Reading data from path=%s" % (str(datafile_i)))
                     # file day_<number>
                     total_per_file_count = 0
                     with open(str(datafile_i)) as f:
-                        #for _ in f:
-                        total_per_file_count += 1
+                        for _ in f:
+                            total_per_file_count += 1
                     total_per_file.append(total_per_file_count)
                     total_count += total_per_file_count
                 else:
-                    sys.exit(datafile)
                     sys.exit("ERROR: Criteo Terabyte Dataset path is invalid; please download from https://labs.criteo.com/2013/12/download-terabyte-click-logs")
 
     # process a file worth of data and reinitialize data
@@ -1214,7 +1208,7 @@ def loadDataset(
         sub_sample_rate,
         randomize,
         data_split,
-        raw_path="../days",
+        raw_path="",
         pro_data="",
         memory_map=False
 ):
