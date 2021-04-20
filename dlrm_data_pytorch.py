@@ -71,7 +71,7 @@ class CriteoDataset(Dataset):
             days = 7
             out_file = "kaggleAdDisplayChallenge_processed"
         elif dataset == "terabyte":
-            days = 24
+            days = 6   #24
             out_file = "terabyte_processed"
         else:
             raise(ValueError("Data set option is not supported"))
